@@ -1,0 +1,20 @@
+<!-- Extend HTML file -->
+{% extends 'b_g.html' %}
+
+{% block body %}
+<br>
+<!-- Bootstrap design to display list of items -->
+<div class="container">
+    {% for theword in object_list %}
+    <table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th scope="row">{{ theword.id }}</th>
+      <td colspan="2">{{ theword.the_word }}</td>
+        <td>{{ theword.the_mng }}</td>
+    </tr>
+  </tbody>
+</table>
+{% endfor %}
+</div>
+{% endblock %}
